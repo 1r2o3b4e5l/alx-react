@@ -3,7 +3,9 @@ import { Seq } from 'immutable';
 export default function printBestStudents(object) {
   const seq = Seq(object);
 
+  //   console.log(seq);
   const filtered = seq.filter((student) => {
+    student.firstName.charAt(0).toUpperCase();
     return student.score > 70;
   });
 
